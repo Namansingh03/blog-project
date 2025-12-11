@@ -7,7 +7,7 @@ class Tweet(models.Model):
     text = models.TextField(max_length=240)
     photo = models.ImageField(upload_to='media/images', blank=True, null=True)
     createdAt = models.DateTimeField(auto_now_add=True)
-    createdAt = models.DateTimeField(auto_now=True)
+    updatedAt = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return f'{self.user.username} - {self.text[:10]}'
